@@ -13,6 +13,28 @@ namespace MVC_GerenciadorDeConteudo
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            
+            //mapeando uma rota por parametro
+            routes.MapRoute(
+                "sobre_rodrigo_parametro",
+                "sobre/{id}/rodrigo",
+                new {controller = "Home", action = "about", id = 0}
+            );
+            
+            
+            routes.MapRoute(
+                "sobre",
+                "sobre",
+                new {controller = "Home", action = "about"}
+            );
+            
+            routes.MapRoute(
+                "contato",
+                "contato",
+                new {controller = "Home", action = "contact"}
+            );
+            
+            //rota padrão sempre por ultimo para ela não sobrescrever as outras
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

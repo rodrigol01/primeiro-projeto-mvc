@@ -13,11 +13,21 @@ namespace MVC_GerenciadorDeConteudo.Controllers
             return View();
         }
 
+        //usando essa ação para a rota com id criada na routeConfig
+        public ActionResult About(int id)
+        {
+            ViewBag.Message = "Agora passo um id como parametro para usar a rota com id no  RouteConfig.";
+            return View();
+        }
+        
+        /*
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
             return View();
         }
+        */
+        
 
         public ActionResult Contact()
         {
