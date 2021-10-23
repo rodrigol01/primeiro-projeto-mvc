@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Business;
 
 namespace MVC_GerenciadorDeConteudo.Controllers
 {
@@ -10,6 +11,7 @@ namespace MVC_GerenciadorDeConteudo.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Paginas = new Pagina().Lista();
             return View();
         }
 
