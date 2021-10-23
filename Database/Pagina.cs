@@ -1,3 +1,4 @@
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -26,6 +27,23 @@ namespace Database
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
+            }
+        }
+
+        public void Salvar(int id, string nome, string conteudo, DateTime data)
+        {
+            using (SqlConnection connection = new SqlConnection(sqlConn()))
+            {
+                var queryString = "insert into paginas (nome, data, conteudo) values ('" + nome+"','" +data.ToString(
+                    "yyyy-MM-dd HH:mm:sss") + "','" + conteudo +"') ";
+                if (id != 0)
+                {
+                    queryString = "update paginas set nome= '" + nome + "', data= '" + data.ToString(
+                        "yyyy-MM-dd HH:mm:sss") + "', conteudo= '" + conteudo + "'where id =" + id;
+                }
+                var command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
             }
         }
     }

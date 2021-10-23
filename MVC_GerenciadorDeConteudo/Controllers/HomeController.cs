@@ -9,9 +9,9 @@ namespace MVC_GerenciadorDeConteudo.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
-            ViewBag.Paginas = new Pagina().Lista();
             return View();
         }
 

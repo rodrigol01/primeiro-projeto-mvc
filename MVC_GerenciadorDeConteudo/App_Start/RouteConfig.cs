@@ -29,6 +29,24 @@ namespace MVC_GerenciadorDeConteudo
             );
             
             routes.MapRoute(
+                "paginas_novo",
+                "pagina/novo",
+                new {controller = "Paginas", action = "novo"}
+            );
+            
+            routes.MapRoute(
+                "paginas_criar",
+                "pagina/criar",
+                new {controller = "Paginas", action = "criar"}
+            );
+
+            routes.MapRoute(
+                "paginas",
+                "paginas",
+                new {controller = "Paginas", action = "Index"}
+            );
+            
+            routes.MapRoute(
                 "contato",
                 "contato",
                 new {controller = "Home", action = "contact"}
