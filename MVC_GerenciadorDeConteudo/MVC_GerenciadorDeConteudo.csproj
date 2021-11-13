@@ -145,7 +145,7 @@
         <Content Include="Scripts\jquery.validate.unobtrusive.js" />
         <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
         <Content Include="Scripts\modernizr-2.8.3.js" />
-        <Content Include="Scripts\validacao.js" />
+        <Content Include="Scripts\validacoes.js" />
         <Content Include="Views\Paginas\Editar.cshtml" />
         <Content Include="Views\Paginas\Index.cshtml" />
         <Content Include="Views\Paginas\Novo.cshtml" />

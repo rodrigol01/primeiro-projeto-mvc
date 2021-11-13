@@ -6,6 +6,7 @@
 @if(TempData["Sucesso"] != null){
     <div class="alert alert-success">@TempData["Sucesso"]</div>
 }
+
 @if (TempData["Erro"] != null)
 {
     <div class="alert alert-danger">@TempData["Erro"]</div>
@@ -34,7 +35,7 @@
                     <a class="btn btn-primary" href="/paginas/@p.Id/editar">Alterar dados</a>
                 </td>
                 <td>
-                    <a class="btn btn-danger" onclick="validarExclusao(@p.Id, event)" href="/paginas/@p.Id/excluir" >Excluir dados</a>
+                    <a class="btn btn-danger" onclick="ValidarExclusao(@p.Id, event)" href="/paginas/@p.Id/excluir" >Excluir dados</a>
                 </td>
             </tr>
         }
