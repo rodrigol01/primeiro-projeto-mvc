@@ -50,5 +50,10 @@ namespace Business
 
             return pagina;
         }
+
+        public static void Excluir(int id)
+        {
+            new Database.Pagina().Excluir(id);
+        }
     }
 }

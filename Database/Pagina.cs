@@ -64,5 +64,17 @@ namespace Database
                 return table;
             }
         }
+
+        public void Excluir(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(sqlConn()))
+            {
+                var queryString = "delete from paginas where id = " + id;
+                
+                var command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -41,6 +41,13 @@ namespace MVC_GerenciadorDeConteudo.Controllers
             return View();
         }
         
+        public void Excluir(int id)
+        {
+            Pagina.Excluir(id);
+
+            Response.Redirect("/paginas");
+        }
+        
         [HttpPost]
         public void Alterar(int id)
         {
