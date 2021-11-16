@@ -34,12 +34,13 @@ namespace Database
         {
             using (SqlConnection connection = new SqlConnection(sqlConn()))
             {
-                var queryString = "insert into paginas (nome, data, conteudo) values ('" + nome+"','" +data.ToString(
-                    "yyyy-MM-dd HH:mm:sss") + "','" + conteudo +"') ";
+                var queryString = "insert into paginas (nome, data, conteudo) values ('"+ nome +"','"
+                                  + data.ToString("yyyy-MM-dd hh:mm:ss") +"','"+ conteudo +"')";
                 if (id != 0)
                 {
-                    queryString = "update paginas set nome= '" + nome + "', data= '" + data.ToString(
-                        "yyyy-MM-dd HH:mm:sss") + "', conteudo= '" + conteudo + "'where id = " + id;
+                    queryString = "update paginas set nome ='"+ nome + "', data='"
+                                  + data.ToString("yyyy-MM-dd hh:mm:ss") + "', conteudo='"
+                                  + conteudo + "' where id=" + id;
                 }
                 var command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
@@ -51,7 +52,7 @@ namespace Database
         {
             using (SqlConnection connection = new SqlConnection(sqlConn()))
             {
-                var queryString = "select * from paginas where id= " + id;
+                var queryString = "select * from paginas where id=" + id;
 
                 var command = new SqlCommand(queryString, connection);
                 command.Connection.Open();

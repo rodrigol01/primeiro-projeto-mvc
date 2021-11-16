@@ -24,6 +24,7 @@
             <td>Data</td>
             <td></td>
             <td></td>
+            <td></td>
         </tr>
         @foreach (var p in paginas)
         {
@@ -31,6 +32,9 @@
                 <td>@p.Id</td>
                 <td>@p.Nome</td>
                 <td>@p.Data</td>
+                <td>
+                    <a href="/paginas/@p.Id/preview"  class="btn btn-warning" target="_blank">Preview</a>
+                </td>
                 <td>
                     <a class="btn btn-primary" href="/paginas/@p.Id/editar">Alterar dados</a>
                 </td>

@@ -51,10 +51,17 @@ namespace MVC_GerenciadorDeConteudo
                 "paginas/{id}/alterar",
                 new {controller = "Paginas", action = "alterar", id = 0}
             );
+            
             routes.MapRoute(
                 "paginas_excluir",
                 "paginas/{id}/excluir",
                 new {controller = "Paginas", action = "excluir", id = 0}
+            );
+            
+            routes.MapRoute(
+                "paginas_preview",
+                "paginas/{id}/preview",
+                new {controller = "Paginas", action = "preview", id = 0}
             );
             
             routes.MapRoute(

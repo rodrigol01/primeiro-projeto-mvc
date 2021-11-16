@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Business;
 
@@ -41,22 +38,29 @@ namespace MVC_GerenciadorDeConteudo.Controllers
             return View();
         }
         
+        public ActionResult Preview(int id)
+        {
+            var pagina = Pagina.BuscaPorId(id);
+            ViewBag.Pagina = pagina;
+            return View();
+        }
+        
+        
         public void Excluir(int id)
         {
             Pagina.Excluir(id);
-
             Response.Redirect("/paginas");
         }
         
         [HttpPost]
+        [ValidateInput(false)]
         public void Alterar(int id)
         {
             try
             {
                 var pagina = Pagina.BuscaPorId(id);
 
-                DateTime data;
-                DateTime.TryParse(Request["data"], out data);
+                DateTime.TryParse(Request["data"], out var data);
             
                 pagina.Nome = Request["nome"];
                 pagina.Conteudo = Request["conteudo"];
@@ -67,7 +71,7 @@ namespace MVC_GerenciadorDeConteudo.Controllers
             }
             catch (Exception e)
             {
-                TempData["Erro"] = "Página não pode ser alterada";
+                TempData["Erro"] = $"Página não pode ser alterada: {e.Message}";
             }
             
             Response.Redirect("/paginas");

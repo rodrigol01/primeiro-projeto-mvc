@@ -149,6 +149,8 @@
         <Content Include="Views\Paginas\Editar.cshtml" />
         <Content Include="Views\Paginas\Index.cshtml" />
         <Content Include="Views\Paginas\Novo.cshtml" />
+        <Content Include="Views\Paginas\Preview.cshtml" />
+        <Content Include="Views\Shared\_Render.cshtml" />
         <Content Include="Web.config" />
         <Content Include="Web.Debug.config">
             <DependentUpon>Web.config</DependentUpon>
