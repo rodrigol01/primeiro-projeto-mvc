@@ -65,6 +65,12 @@ namespace MVC_GerenciadorDeConteudo
             );
             
             routes.MapRoute(
+                "api_consulta_cep",
+                "api/consulta-cep/{cep}",
+                new {controller = "Cep", action = "Consulta", cep = ""}
+            );
+            
+            routes.MapRoute(
                 "paginas",
                 "paginas",
                 new {controller = "Paginas", action = "Index"}
