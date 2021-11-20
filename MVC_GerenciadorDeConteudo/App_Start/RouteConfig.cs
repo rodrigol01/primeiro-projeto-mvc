@@ -65,17 +65,18 @@ namespace MVC_GerenciadorDeConteudo
             );
             
             routes.MapRoute(
+
                 "paginas_preview_dinamico",
                 "paginas/{id}/preview-dinamico",
                 new {controller = "Paginas", action = "previewDinamico", id = 0}
             );
-            
+
             routes.MapRoute(
                 "paginas_preview_dinamico_notema",
                 "paginas/{id}/preview-dinamico-notema",
                 new {controller = "Paginas", action = "previewDinamicoNoTema", id = 0}
             );
-            
+
             routes.MapRoute(
                 "paginas",
                 "paginas",
