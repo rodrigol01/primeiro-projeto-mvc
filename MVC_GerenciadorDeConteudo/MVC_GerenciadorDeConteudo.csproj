@@ -43,6 +43,10 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="Microsoft.CSharp" />
+        <Reference Include="NVelocity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc">
+          <HintPath>..\packages\NVelocity.1.2.0\lib\netstandard2.0\NVelocity.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Data" />
         <Reference Include="System.Drawing" />
@@ -150,6 +154,7 @@
         <Content Include="Views\Paginas\Index.cshtml" />
         <Content Include="Views\Paginas\Novo.cshtml" />
         <Content Include="Views\Paginas\Preview.cshtml" />
+        <Content Include="Views\Paginas\PreviewDinamico.cshtml" />
         <Content Include="Views\Shared\_Render.cshtml" />
         <Content Include="Web.config" />
         <Content Include="Web.Debug.config">
